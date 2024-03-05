@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI Pseudo Classes Example</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js"></script>
 </head>
 <body>
-    
+    <form>
+        <fieldset>
+            <legend>Feedback form</legend>
+            <div>
+                <label for="fname">First name: </label>
+                <input id="fname" name="fname" type="text" required />
+            </div>
+            <div>
+                <label for="lname">Last name: </label>
+                <input id="lname" name="lname" type="text" required />
+            </div>
+            <div>
+                <label for="email">
+                    Email address (include if you want a response):
+                </label>
+                <input id="email" name="email" type="email" />
+            </div>
+        </fieldset>
+        <fieldset id="billing">
+            <legend>Billing address</legend>
+            <div>
+              <label for="billing-checkbox">Same as shipping address:</label>
+              <input type="checkbox" id="billing-checkbox" checked />
+            </div>
+            <div>
+              <label for="name" class="billing-label disabled-label">Name: </label>
+              <input id="name" name="name" type="text" disabled required />
+            </div>
+            <div>
+              <label for="address2" class="billing-label disabled-label">
+                Address:
+              </label>
+              <input id="address2" name="address2" type="text" disabled required />
+            </div>
+            <div>
+              <label for="pcode2" class="billing-label disabled-label">
+                Zip/postal code:
+              </label>
+              <input id="pcode2" name="pcode2" type="text" disabled required />
+            </div>
+          </fieldset>
+
+          <div><button>Submit</button></div>\
+    </form>
 </body>
 </html>

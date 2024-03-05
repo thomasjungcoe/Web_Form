@@ -121,11 +121,73 @@ appearance: controlling OS-level styling
 What can be done about the "ugly" elements?
 
 
+9.) UI pseudo-classes
+Obj: To understand what parts of forms are hard to style., and why;
+     To learn what can be done to customize them.
+
+What pseudo-classes do we have avaiable?
+    * :hover
+    * :focus
+    * :active
+    * :required
+    * :valid
+    * :enabled
+    * :checked    
 
 
+10.) Client-side form validation
+Before submitting data to the server, it is important to ensure all required form control are filled out, in the correct format, this is called client-side form validation, and helps  ensure data submitted matches the requirements set forth in the various form controls.
+
+Obj: To understand what client-side form validation is, why it's important, and how to apply various techniques to implement it.
+
+    What is form validation?
+    Different types of client-side validation
+        * Built-in form validation uses HTML  form validdation features (has better perf than JS but not very customizable)
+        * JS validation is coded using JS; completely customizable but you need ot creat it all (or use a library)
+
+    Using built-in form validation.
+        * required
+        * minlength
+        * min / max
+        * type
+        * pattern
+        * :invalid  /  :valid
+        
+    Validating against a regular expression
+        a — Matches one character that is a (not b, not aa, and so on).
+        abc — Matches a, followed by b, followed by c.
+        ab?c — Matches a, optionally followed by a single b, followed by c. (ac or abc)
+        ab*c — Matches a, optionally followed by any number of bs, followed by c. (ac, abc, abbbbbc, and so on).
+        a|b — Matches one character that is a or b.
+        abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).
+
+    Validating forms using JavaScript
+        The Constraint Validation API
+            HTMLButtonElement (represents a <button> element)
+            HTMLFieldSetElement (represents a <fieldset> element)
+            HTMLInputElement (represents an <input> element)
+            HTMLOutputElement (represents an <output> element)
+            HTMLSelectElement (represents a <select> element)
+            HTMLTextAreaElement (represents a <textarea> element)
+        Implementing a customized error message
 
 
+11.) Sending form data
 
+Once the form data has been validated on the client-side, it is okay to submit the form.
 
-9.)
-10.)
+Obj:    To understand what happens when form data is submitted, including getting a basic idea of how data is processed on the server.
+
+Client/Server Architecture
+
+At its most basic, the web uses a client/server architecture that can be summarized as follows: a client (usually a web browser) sends a request to a server (most of the time a web server like Apache, Nginx, IIS, Tomcat, etc.), using the HTTP protocol. The server answers the request using the same protocol.
+
+    On the client side: defining how to send the data
+        The <form> element defines how the data will be sent. All of its attributes are designed to let you configure the request to be sent when a user hits a submit button.
+
+        The action attribute
+        The method attribute
+        The GET method  
+        
+
+12.)
